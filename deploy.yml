@@ -1,0 +1,14 @@
+---
+- hosts: aws_ec2
+  tasks:
+
+    - name: Install Python
+      become: true
+      apt:
+       name:
+        - python
+    - name: adding backend user
+      become: true
+      user:
+      name: application
+     
